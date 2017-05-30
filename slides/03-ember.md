@@ -60,7 +60,7 @@ Ember Ecosystem / Software Stack
 - Liquid Fire <span class="small">(animations)</span>
 
 Note:
-- **CLI: standard project/file structure, dev server, testing framework, dependency management, ES6/ES7 support, asset management, code generation
+- CLI: standard project/file structure, dev server, testing framework, dependency management, ES6/ES7 support, asset management, code generation
 - Data: Maps client-side models to server-side data, allowing load/save/etc without configuration via JSON API
 - Inspector: Firefox/Chrome plugin to inspect internals of Ember apps
 - Fastboot: Allows Ember apps to run through Node, outputing HTML/CSS for quick initial renders, while the JS loads in the background

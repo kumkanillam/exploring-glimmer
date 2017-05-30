@@ -3,4 +3,4 @@
 - No testing story right now
 - Ember has a very robust component testing built in
   - via EmberCLI + QUnit
-- Glimmer components will be testable
+- Making sure Glimmer components are testable is a high priority task

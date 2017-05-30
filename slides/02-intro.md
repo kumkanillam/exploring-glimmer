@@ -1,22 +1,17 @@
 ## What we'll cover tonight
 
 - What is Glimmer, history 
-<!-- .element: class="fragment" data-fragment-index="2" -->
-- Where it fits in & compares to<br>the Front End Ecosystem 
-<!-- .element: class="fragment" data-fragment-index="2" -->
+- Where it fits in & compares to other<br>libraries/frameworks in   the Front End Ecosystem 
 - How Glimmer works (DEMO)
-<!-- .element: class="fragment" data-fragment-index="3" -->
-- When/where to use it
-<!-- .element: class="fragment" data-fragment-index="4" -->
-- Future of Glimmer
-<!-- .element: class="fragment" data-fragment-index="4" -->
+- When/where/why to use it
+- Future of Glimmer (and Ember)
 
 ----
 
 ## Mike Behnke
 #### Senior Software Engineer
 
-<img src="img/LPGLogo-HQ-200x200.png"> 
+![LPG logo](/img/LPGLogo-HQ-200x200.png) 
 
 <span class="small">Twitter/Github: @localpcguy</span>
 
@@ -33,17 +28,17 @@ focus: Front-End Web Development
 
 <div class="jool-items clearfix">
 	<div class="jool-item">
-		<img src="/img/discover_2x.png">
+		![discover image](/img/discover_2x.png)
 		<h4>DISCOVER</h4>
 		<p>their life purpose</p>
 	</div>
 	<div class="jool-item">
-		<img src="/img/monitor_2x.png">
+		![monitor image](/img/monitor_2x.png)
 		<h4>MONITOR</h4>
 		<p>how well they are living by it</p>
 	</div>
 	<div class="jool-item">
-		<img src="/img/develop_2x.png">
+	    ![develop image](/img/develop_2x.png)
 		<h4>DEVELOP</h4>
 		<p>the energy and willpower<br>they need to pursue it</p>
 	</div>
