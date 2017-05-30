@@ -3,19 +3,28 @@
 
 ----
 
-## What Was Glimmer?
+## Glimmer Origins?
 
-- The rendering engine inside of Ember
+- Original templating engine inside of Ember was Handlebars
+- Angular was struggling with dirty-checking
 - React had demonstrated the power of Virtual DOM
-- Glimmer diffs values, not DOM
-- Differentiates between dynamic and static areas, <br>only needing to re-render dynamic areas
+
+Note:
+Original Sproutcore/Ember view engine: Regex string-based templating via Handlebars
+Dirty checking: process of looping to check every scope variable to detect the changes, update DOM as changes found, re-loop
 
 ----
 
-### Built to replace the original SproutCore view engine
+### Replaced the original SproutCore view engine
+
 - built on top of HTMLBars - Ember v1.13
   - Declarative syntax differentiates between static vs dynamic areas (HandleBars)
   - Significantly improved re-render performance
+- Glimmer diffs values, not DOM
+- Differentiates between dynamic and static areas, <br>only needing to re-render dynamic areas
+
+Note: 
+Glimmer 1 released Summer 2015
 
 ----
 

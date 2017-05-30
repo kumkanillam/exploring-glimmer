@@ -18,15 +18,27 @@ span.logo {
 .header-date,
 .footer {
 	position: absolute;
-	font: 14px Helvetica,arial,sans-serif;
+	font: .75em Helvetica,arial,sans-serif;
 	text-transform: uppercase;
 	padding: 0 20px;
 }
+.in-iframe .header-title,
+.in-iframe .header-date,
+.in-iframe .footer {
+	display: none;
+}
+
 .header-title {
 	top: 20px;
 	left: 20px;
 	padding-bottom: 5px;
 	border-bottom: 1px solid grey;
+}
+.semjs-logo {
+	position: absolute;
+	top: 30px;
+	left: 10px;
+	width: 60px;
 }
 .header-date {
 	top: 20px;
@@ -40,4 +52,37 @@ span.logo {
 	left: 20px;
 	padding-top: 5px;
 	border-top: 1px solid grey;
+}
+span.medium {
+	font-size: .7em;
+}
+span.small {
+	font-size: .5em;
+}
+
+.jool-items {
+	overflow: hidden;
+	margin: 20px auto;
+}
+
+.jool-item {
+	float: left;
+	width: 33%;
+}
+
+.jool-items .jool-item h4 {
+	font-size: .7em;
+	margin: 0 0 5px;
+}
+
+.jool-items .jool-item p {
+	font-size: .5em;
+	margin: 0;
+}
+
+.jool-items .jool-item img {
+	max-width: 104px;
+	max-height: 104px;
+	border-radius: 50%;
+	border: 1px solid #333;
 }

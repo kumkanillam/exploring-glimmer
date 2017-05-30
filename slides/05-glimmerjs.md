@@ -1,17 +1,12 @@
-## What is GlimmerJS
+## What is GlimmerJS?
 
-- Extracted to be a standalone library
-- Component based view library
+- Extracted to be a very small, standalone library
+- View layer only
+- Component based
 - Built by the Ember team, uses EmberCLI
-
-----
-
-#### npm your way to Ember
+- Part of the Ember ecosystem
 
 ----
 
 ### TypeScript
 
-----
-
-### Experimentation

@@ -50,17 +50,17 @@
 						 data-separator-vertical="^\r?\n----\r?\n$"
 						 data-separator-notes="^Note:|Notes:">
 				</section>
-				<section data-markdown="slides/06-getting-started.md"
+				<section data-markdown="slides/06-compare.md"
 						 data-separator="^\r?\n---\r?\n$"
 						 data-separator-vertical="^\r?\n----\r?\n$"
 						 data-separator-notes="^Note:|Notes:">
 				</section>
-				<section data-markdown="slides/07-testing-story.md"
+				<section data-markdown="slides/07-getting-started.md"
 						 data-separator="^\r?\n---\r?\n$"
 						 data-separator-vertical="^\r?\n----\r?\n$"
 						 data-separator-notes="^Note:|Notes:">
 				</section>
-				<section data-markdown="slides/08-compare.md"
+				<section data-markdown="slides/08-testing-story.md"
 						 data-separator="^\r?\n---\r?\n$"
 						 data-separator-vertical="^\r?\n----\r?\n$"
 						 data-separator-notes="^Note:|Notes:">
@@ -75,10 +75,15 @@
 						 data-separator-vertical="^\r?\n----\r?\n$"
 						 data-separator-notes="^Note:|Notes:">
 				</section>
+				<section data-markdown="slides/11-end.md"
+						 data-separator="^\r?\n---\r?\n$"
+						 data-separator-vertical="^\r?\n----\r?\n$"
+						 data-separator-notes="^Note:|Notes:">
+				</section>
 			</div>
 		</div>
 
-		<div class="header-title">SEM.JS - GlimmerJS</div>
+		<div class="header-title">SEM.JS <img src="/img/semjs-logo.png" class="semjs-logo"></div>
 		<div class="header-date">06-12-2017</div>
 		<div class="footer">Mike Behnke - @LocalPCGuy</div>
 
@@ -104,6 +109,21 @@
 				history: true,
 				transition: 'convex'
 			});
+		</script>
+
+		<script>
+			function inIframe () {
+				try {
+					return window.self !== window.top;
+				} catch (e) {
+					return true;
+				}
+			}
+
+			if (inIframe()) {
+				console.log('in-iframe', window)
+				document.documentElement.classList.add('in-iframe');
+			}
 		</script>
 	</body>
 </html>
