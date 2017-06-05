@@ -108,4 +108,4 @@ Definitions
 ----
 
 
-![Glimmer2 Opcodes](/img/glimmer2-opcodes.png) 
+![Glimmer2 Opcodes](img/glimmer2-opcodes.png) 

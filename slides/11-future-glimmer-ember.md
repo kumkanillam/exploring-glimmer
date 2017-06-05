@@ -30,7 +30,7 @@ Notes:
 
 Goal is that Glimmer users can upgrade to Ember over time
 
-<img class="no-border" alt="glimmer to ember" src="/img/glimmer-to-ember.png" />
+<img class="no-border" alt="glimmer to ember" src="img/glimmer-to-ember.png" />
 
 #### Start small, build big
 

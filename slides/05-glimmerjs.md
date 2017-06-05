@@ -195,5 +195,5 @@ common issue for new Ember users until they develop muscle memory
 ### File Size Compared
 #### Hello World App
 
-![glimmer file size compared](/img/glimmer-file-size.png)
+![glimmer file size compared](img/glimmer-file-size.png)
 

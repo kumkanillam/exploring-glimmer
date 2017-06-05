@@ -9,4 +9,12 @@
 
 #### Warning: Still Alpha, much changing
 
-![much alpha](/img/much-alpha.jpg)
+![much alpha](img/much-alpha.jpg)
+
+----
+
+#### Want to get involved?
+
+- Slack channel #-glimmer on<br>embercommunity.slack.com
+- Website/Documentation
+- Integration with Ember

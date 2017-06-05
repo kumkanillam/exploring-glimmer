@@ -46,8 +46,8 @@ speed: diffing values vs. diffing VirtualDOM
 ----
 
 ### Where to use Glimmer?
- 
+
+- Anywhere drop-in interactive features needed
 - CMSes
 - Blogs
-- Drop-in interactive features
-- Agency work
+- Agency work 

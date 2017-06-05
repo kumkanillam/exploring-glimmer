@@ -101,11 +101,11 @@ Glimmer puts all folders in the<br>`my-app/src/ui/components` folder
 ember g glimmer-component hello-glimmer
 ```
 
-![new glimmer compoment](/img/glimmer-component.png)
+![new glimmer compoment](img/glimmer-component.png)
 
 ----
 
-![filesystem after new compoment](/img/glimmer-filesystem-new-component.png)
+![filesystem after new compoment](img/glimmer-filesystem-new-component.png)
 
 ----
 
@@ -122,7 +122,7 @@ ember g glimmer-component conference-speakers/conference-speaker
 
 ----
 
-![filesystem nested compoment](/img/glimmer-filesystem-nested.png)
+![filesystem nested compoment](img/glimmer-filesystem-nested.png)
 
 ----
 
@@ -130,6 +130,7 @@ ember g glimmer-component conference-speakers/conference-speaker
 
 - Works with both CSS or SCSS file
   - Main app styles file generated:<br>`src/ui/styles/app.scss`
+- Ember team is working on co-located/scoped CSS   
 
 Note:
 Would personally put each component's styles in the component folder
@@ -252,7 +253,7 @@ vs.
 
 ### Components and Actions
 
-![component templates](/img/component-template.png)
+![component templates](img/component-template.png)
 
 Note:
 - {{if}}/{{else}} and {{action}} helpers
