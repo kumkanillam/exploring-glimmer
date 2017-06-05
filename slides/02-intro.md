@@ -1,10 +1,13 @@
 ## What we'll cover tonight
 
 - What is Glimmer, history 
-- Where it fits in & compares to other<br>libraries/frameworks in   the Front End Ecosystem 
+- Where it fits in & compares 
 - How Glimmer works (DEMO)
 - When/where/why to use it
 - Future of Glimmer (and Ember)
+
+Note: 
+compares to other libraries/frameworks in the Front End Ecosystem 
 
 ----
 
@@ -15,6 +18,8 @@
 
 <span class="small">Twitter/Github: @localpcguy</span>
 
+Slides: local-pc-guy.com/slides/exploring-glimmer/
+
 Note:
 focus: Front-End Web Development
 
@@ -22,9 +27,10 @@ focus: Front-End Web Development
 
 ### JOOL Health
 
-- JOOL is a purpose-driven solution for promoting healthy change.
-- The apps help individuals:
-<br>
+is a purpose-driven solution for<br>promoting healthy change
+
+works with employers to provide access to<br>JOOL apps that help individuals:
+
 
 <div class="jool-items clearfix">
 	<div class="jool-item">
@@ -52,4 +58,8 @@ Use the science of purpose in the apps we're building to help people be healthie
 
 Integrating the science of purpose, advanced mobile technology, and big data analytics to help 
 employers, health plans, and health systems improve their populations’ health engagement and overall well-being.
+
+----
+
+#### Please ask questions
 

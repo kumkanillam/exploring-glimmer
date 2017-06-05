@@ -86,3 +86,13 @@ span.small {
 	border-radius: 50%;
 	border: 1px solid #333;
 }
+
+a.glimmer-video {
+	display: block;
+	margin-bottom: -50px;
+}
+
+.reveal img.no-border {
+	border: none;
+	border-radius: 10px;
+}
