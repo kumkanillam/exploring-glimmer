@@ -86,7 +86,7 @@ my-app/ember-cli-build.js: used to configure Ember-CLI in various ways
 
 ### UI folder
 
-Glimmer puts all folders in the<br>`my-app/src/ui/components` folder
+Glimmer puts all components in the<br>`my-app/src/ui/components` folder
 
 - Main component: `my-app/`
   - JavaScript/Typescript: `my-app/components.ts`
@@ -211,7 +211,7 @@ console.log(this.args.name); // prints "Mike"
 ----
 
 ### Properties Syntax
-### Data internal to component
+#### Data internal to component
 
 In component
 ```
@@ -289,7 +289,7 @@ Only `didInsertElement` currently implemented
 #### Change Tracking
 
 - **Rule #1**
-  - Tracked Properties are immutable by default
+  - Properties are immutable by default
   - Allows Glimmer to skip expensive change tracking
 
 - **Rule #2**
@@ -319,7 +319,7 @@ export default class extends Component {
   }
 }
 ```
-  
+
 ----
 
 ### Change Detection: Why Tracked Properties

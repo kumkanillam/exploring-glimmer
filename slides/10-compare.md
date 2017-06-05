@@ -11,7 +11,7 @@
 <span class="medium">(from smallest to largest)</span>
 - Preact
 - Inferno
-- Glimmer
+- **Glimmer**
 - React
 
 ----
@@ -50,4 +50,4 @@ speed: diffing values vs. diffing VirtualDOM
 - Anywhere drop-in interactive features needed
 - CMSes
 - Blogs
-- Agency work 
+- Agency work / Marketing sites

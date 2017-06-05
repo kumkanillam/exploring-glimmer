@@ -92,7 +92,7 @@ export default class extends Component {
 
 ### TypeScript
 
-- Written in TypeScript, designed for JavaScritp
+- Written in TypeScript, designed for JavaScript
   - Same API in TypeScript or JavaScript
 - Using TypeScript is optional
 <br><br>
