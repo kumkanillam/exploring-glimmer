@@ -1,9 +1,9 @@
 ## Takeaways
 
-- GlimmerJS is a stand-alone framework<br>for building interative UI components
-- Built by the Ember team, uses EmberCLI
+- GlimmerJS is a very small, very fast stand-alone framework<br>for building interative UI components
+  - Fast for both initial render and re-render/updates
 - Easy to get started
-- Fast render, re-render
+- Built by the Ember team, uses EmberCLI
 
 ----
 

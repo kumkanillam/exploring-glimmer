@@ -2,9 +2,13 @@
 
 Glimmer includes the ability to use<br>Glimmer components as web components
 
-1. Include component tag in HTML
+1. Include `<custom-component>` tag in HTML
 2. Include the Glimmer JS bundle
 3. Include Web Component shim (for now)
+
+Note:
+- Allows Glimmer components to be used anywhere
+- Web Comp. tag could be rendered by server code
 
 ----
 
@@ -27,14 +31,15 @@ Currently cannot have self-closing web components
 ### Add to an existing app
 
 ```
-yarn add --dev @glimmer/web-component
-```
-```
 npm install --save-dev @glimmer/web-component
 ```
-
-Add 2 lines to `src/index.tx`
 ```
+yarn add --dev @glimmer/web-component
+```
+
+Add 2 lines to `src/index.ts`
+```
+  ...
 + import initializeCustomElements from '@glimmer/web-component';
   ...
   app.boot();
@@ -42,8 +47,10 @@ Add 2 lines to `src/index.tx`
 ```
 
 Note:
-will register custom elements for each of the component names you give to initializeCustomElements,
-allow use as `<foo-bar></foo-bar>` anywhere in DOM, will render Glimmer component
+will register custom elements for each of the component names<br>
+you give to initializeCustomElements,<br>
+allow use as `<foo-bar></foo-bar>` anywhere in DOM, <br>
+which will render Glimmer component
 
 ----
 
@@ -52,7 +59,7 @@ allow use as `<foo-bar></foo-bar>` anywhere in DOM, will render Glimmer componen
 - Requires Web Component shim
 - No self closing tags for web components
 - Cannot pass arguments to top-level Glimmer components
-  - Dev team is working to remove that limitation
+  - Dev team is working to remove that limitation<br><br>
 
 - More info
   - https://www.webcomponents.org/introduction

@@ -29,19 +29,42 @@
 ----
 
 ### Comparison
+- Direct comparison == React<br><br>
+- Both are:
+  - Component libraries
+  - UI/View layer only
+  - Similar use cases
 
-- Direct comparison would be React
-- Can be faster than React
-- Glimmer is a superset of HTML & Web Components
-  - just like Sass <- CSS, Typescript <- JavaScript
+----
+
+### Glimmer Benefits
+- Faster*
+- Simpler: Glimmer is a superset of HTML & Web Components
+  - Sass <- CSS
+  - Typescript <- JavaScript
 - No need to learn JSX
 - Exports to Web Components
-
+- EmberCLI, Ember Ecosystem
 
 
 Note:
 So where does Glimmer fit? Right next to React
 speed: diffing values vs. diffing VirtualDOM
+
+----
+
+### React Benefits
+
+- Ecosystem exists to build to MVC
+  - Router
+  - libraries like Redux, etc.
+- Industry mind-share, lots of help 
+- More mature
+- some people love JSX
+
+Note:
+help = Stack Overflow, etc
+many 
 
 ----
 

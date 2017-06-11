@@ -18,6 +18,8 @@ ember install ember-cli-deploy-build
 ember install ember-cli-deploy-git 
 ```
 
+<span class="small"><a href="http://ember-cli-deploy.com/" target="_blank">http://ember-cli-deploy.com/</a></span>
+
 ----
 
 ### Update Configuration

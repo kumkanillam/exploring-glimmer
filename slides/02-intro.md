@@ -21,15 +21,19 @@ compares to other libraries/frameworks in the Front End Ecosystem
 Slides: [local-pc-guy.com/slides/exploring-glimmer/](http://local-pc-guy.com/slides/exploring-glimmer/)
 
 Note:
-focus: Front-End Web Development
+focus: Front-End Web Development, JavaScript
+
+me: Commodore Plus4/BASIC, printer A2News, WCC, 
+    computer repair (hence LPG), freelance, 
+    Enlighten/Agency, Startup/JOOL
 
 ----
 
-### JOOL Health
+<img class="no-border" alt="JOOL Health logo" src="img/jool-health-logo.png"/>
 
 is a purpose-driven solution for<br>promoting healthy change
 
-works with employers to provide access to<br>JOOL apps that help individuals:
+<span class="small">works with employers, health plans and health systems to provide access to JOOL apps that help individuals:
 
 
 <div class="jool-items clearfix">
@@ -61,5 +65,5 @@ employers, health plans, and health systems improve their populations’ health 
 
 ----
 
-#### Please ask questions
+### Please ask questions
 

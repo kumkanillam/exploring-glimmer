@@ -1,7 +1,10 @@
 ### Demos
-- [Uptime Boxes](https://glimmerjs.com/demos/uptime-boxes/) - https://glimmerjs.com/demos/uptime-boxes/
-- [TODOMVC](https://glimmerjs.github.io/todomvc-demo/) - https://glimmerjs.github.io/todomvc-demo/
-- [Glimmeroids](https://www.t-sauer.io/Glimmeroids/) - https://www.t-sauer.io/Glimmeroids/
+- Uptime Boxes 
+  - https://glimmerjs.com/demos/uptime-boxes/
+- TODOMVC 
+  - https://glimmerjs.github.io/todomvc-demo/
+- Glimmeroids 
+  - https://www.t-sauer.io/Glimmeroids/
 
 Note:
 If time

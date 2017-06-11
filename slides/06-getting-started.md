@@ -19,10 +19,10 @@ yarn - offers deterministic builds
 ### Installing EmberCLI Beta
 
 ```
-yarn global add ember-cli@2.14.0-beta.1
-```
-```
 npm install -g ember-cli@2.14.0-beta.1
+```
+```
+yarn global add ember-cli@2.14.0-beta.1
 ```
 <span class="small">Recommend using npm to install Ember CLI</span>
 
@@ -66,30 +66,36 @@ Can point at Glimmer Blueprint locally:
 
 ![Glimmer install](img/glimmer-filesystem.png)
 
-----
+Note:
 
 ### Files
 
-```
-my-app/config/environment.js: the base Glimmer config file
-my-app/config/*.ts: configuration files to keep Typescript happy 
-    (ES2015 support coming) 
-my-app/dist: your built files end up here
-my-app/src/index.ts: used to do initial app config before our Glimmer app 
-    boots (the div ID Glimmer renders into is set here (see the 
-    containerElement variable))
-my-app/ember-cli-build.js: used to configure Ember-CLI in various ways 
+- **my-app/config/environment.js**: the base Glimmer config file
+- **my-app/config/*.ts**: configuration files to keep Typescript happy  
+- **my-app/dist**: your built files end up here
+- **my-app/src/index.ts**: used to do initial app config before our Glimmer app boots
+- **my-app/ember-cli-build.js**: used to configure Ember-CLI in various ways 
     (importing vendor files, Broccoli options, etc.)
-```
 
 ----
 
 ### UI folder
 
-Glimmer puts all components in the<br>`my-app/src/ui/components` folder
+Glimmer puts all components in the `ui/components` folder,<br>generates a `component.ts` and `template.hbs` file
 
-- Main component: `my-app/`
-  - JavaScript/Typescript: `my-app/components.ts`
+```
+my-app/src/ui/components/
+                     |-- my-app/
+                     |      |-- component.ts
+                     |      |-- template.hbs
+                     |
+                      ... more files
+``` 
+
+Note:
+
+- Main component = folder name
+  - JavaScript/Typescript: `component.ts`
   - Template: `template.hbs`
 - Components can be nested
 
@@ -147,7 +153,7 @@ and reference it from the main `app.scss` file
 import Component from "@glimmer/component";
 
 export default class ConferenceSpeakers extends Component {
-  speakers = ['Tom', 'Yehuda', 'Ed'];
+  speakers = ['Tom', 'Yehuda', 'Mike'];
 }
 ```
 
@@ -195,12 +201,12 @@ Properties are internal to the component, declared in the class
 
 In another component
 ```
-<conference-speaker @name="Mike" @status="Speaking" />
+<conference-speaker @name="Mike" @topic="Speaking" />
 ```
 
 Inside the template
 ````
-{{@name}} is {{@status}}
+{{@name}} is speaking about {{@topic}}
 ````
 
 In the component code
@@ -219,7 +225,7 @@ import Component from '@glimmer/component';
 
 export default class ConferenceSpeaker extends Component {
   user = {
-    name: 'Robbie'
+    name: 'Bob'
   };
 }
 ```
@@ -249,6 +255,10 @@ vs.
 {{firstName}}
 ```
 
+Note: 
+May remember `@index` in the `{{#each...}}` helper<br>
+team is discussing changing that to avoid confusion
+
 ----
 
 ### Components and Actions
@@ -261,11 +271,65 @@ Note:
 - `get` in front of `currentlySpeaking()` defines a property for template
 - @tracked - functions will re-run when `current` changes
 
+code:
+<hr>
+```
+import Component, {tracked} from '@glimmer/component';
+
+export default class ConferenceSpeakers extends Component {
+  @tracked current = 0;
+  speakers = [
+    {id: 0, name: 'Tom', topic: 'Ember'},
+    {id: 1, name: 'Yehuda', topic: 'Internals'},
+    {id: 2, name: 'Mike', topic: 'Glimmer'}
+  ];
+
+  @tracked('current')
+  get moreSpeakers() {
+    return (this.speakers.length - 1) > this.current;
+  }
+
+  @tracked('current')
+  get speakerSubset() {
+    return this.speakers.slice(0, this.current + 1);
+  }
+
+  next() {
+    this.current = this.current + 1;
+  }
+};
+```
+<hr>
+```
+<div>
+  <h2>Speakers</h2>
+  {{#each speakerSubset key="@index" as |speaker|}}
+
+    <conference-speaker @name={{speaker.name}} @topic={{speaker.topic}}></conference-speaker>
+  {{/each}}
+
+  {{#if moreSpeakers}}
+    <button onclick={{action next}}>Next</button>
+  {{else}}
+    <p>All finished!</p>
+  {{/if}}
+</div>
+```
+<hr>
+```
+<div>
+  <ul>
+    <li>Name: {{@name}}</li>
+    <li>Topic: {{@topic}}</li>
+  </ul>
+</div>
+```
+
 ----
 
 ### Lifecycle Hooks
 
-- didInsertElement
+- didInsertElement*
 - didRender
 - didUpdate
 - willDestroy
@@ -320,6 +384,45 @@ export default class extends Component {
 }
 ```
 
+Note:
+Should be able to easily extend this pattern to a Redux style with a "global" state object
+
+Code
+<hr>
+
+```
+import Component, {tracked} from '@glimmer/component';
+   
+   export default class ConferenceSpeakers extends Component {
+     @tracked state = {
+       current: 0
+     };
+   
+     speakers = [
+       {name: 'Tom', topic: 'Ember'},
+       {name: 'Yehuda', topic: 'Internals'},
+       {name: 'Mike', topic: 'Glimmer'}
+     ];
+   
+     @tracked('state')
+     get moreSpeakers() {
+       return (this.speakers.length - 1) > this.state.current;
+     }
+   
+     @tracked('state')
+     get speakerSubset() {
+       return this.speakers.slice(0, this.state.current + 1);
+     }
+   
+     next() {
+       this.state = {
+         ...this.state,
+         current: this.state.current + 1
+       };
+     }
+   };
+```
+
 ----
 
 ### Change Detection: Why Tracked Properties
@@ -334,7 +437,7 @@ export default class extends Component {
   
 Note:
 - prop observation - usually **slow initial render** performance
-- Virtual DO - prioritize **raw render speed**
+- Virtual DOM - prioritize **raw render speed**
   
 ----
 
@@ -346,7 +449,8 @@ Note:
 <span class="small">More info:</span><br>
 <span class="small">[Tracked Properties](https://glimmerjs.com/guides/tracked-properties)</span>
 
-
+Note:
+Go see link for more info
 
 
 

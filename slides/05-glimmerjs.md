@@ -1,3 +1,4 @@
+
 ## What is GlimmerJS?
 
 Standalone UI Library<br>Announced at EmberConf 2017 (in May)
@@ -10,20 +11,24 @@ alt="Glimmer Announcement Video" width="240" height="180" border="10" /></a>
 
 ----
 
-- Extracted from Ember's battle-tested rendering layer
+### GlimmerJS
+
+- Extracted from Ember's rendering layer
 - Small ui-component library
 - Built by the Ember team, uses EmberCLI
 - Part of the Ember ecosystem
 
 Note:
+- battle-tested 
 - View layer only
 
 ----
 
 ## Glimmer Strengths 
 
-- Small and fast for mobile web
 - Simple to learn to use
+- Simple composable components
+- Small and fast, great for mobile web
 - One of the [fastest](https://glimmerjs.com/demos/uptime-boxes/) JavaScript rendering engines
 
 ----
@@ -113,12 +118,25 @@ TypeScript is another tool you can use, not one you have to
 ### Computed Properties
 
 ```
+import Ember from 'ember';
+
+export default Ember.Component.extend({
+  firstName: 'Katie',
+  lastName: 'Gengler',
+  
+  fullName: Ember.computed(function() {
+    return `${this.get('firstName')} ${this.get('lastName'}`;
+  })
+});
+```
+
+```
 import Component from '@glimmer/component';
 
 export default class extends Component {
-  firstName = "Katie";
-  lastName = "Gengler";
-
+  firstName = 'Katie';
+  lastName = 'Gengler';
+  
   get fullName() {
     return `${this.firstName} ${this.lastName}`;
   }
@@ -131,7 +149,21 @@ can use standard getters/setters
 
 ----
 
-### Decorators
+### No `.get()` / `.set()` / Decorators
+
+Relies on ES5 getters/setters to intercept properties
+
+
+```
+import Ember from 'ember';
+
+export default Ember.Component.extend({
+  // ...
+  fullName: Ember.computed('firstName', 'lastName', function() {
+    return `${this.get('firstName')} ${this.get('lastName'}`;
+  })
+});
+```
 
 ```
 import Component, { tracked } from '@glimmer/component';
@@ -148,13 +180,15 @@ export default class extends Component {
 ```
 
 Note:
+get/set common issue for new Ember users until they develop muscle memory
+
 Decorators are Stage 2 TC39 proposal
 
 ----
 
 ### Actions
 
-Actions are just functions, with optional argument currying
+Actions are just functions
 
 ```
 import Component, { tracked } from '@glimmer/component';
@@ -176,15 +210,6 @@ export default class extends Component {
 
 ----
 
-### No `.get()` / `.set()`
-
-Relies on ES5 getters/setters to intercept properties
-
-Note:
-common issue for new Ember users until they develop muscle memory
-
-----
-
 ### File Size
 
 - Ember criticized for large file sizes<br>typical hello world app ~200KB
@@ -197,3 +222,10 @@ common issue for new Ember users until they develop muscle memory
 
 ![glimmer file size compared](img/glimmer-file-size.png)
 
+Note:
+- preact
+- glimmer
+- vue.js
+- react
+- Angular 
+- Ember

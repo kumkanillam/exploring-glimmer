@@ -5,31 +5,29 @@
 
 ## Glimmer Origins?
 
-- Original rendering engine inside of Ember was Handlebars
+Original rendering engine inside of Ember was Handlebars
 
-https://gist.github.com/GavinJoyce/e6e0cc4fedbcf96d39267e59ba85472c
 
-Note:
-Handlebars = basic string concatenation
-
-----
-
-### Handlebars
+#### Handlebars
 
     <h1>Hello {{environment}}</h1>
+
+Note:
+https://gist.github.com/GavinJoyce/e6e0cc4fedbcf96d39267e59ba85472c
+
+Handlebars = basic string concatenation
 
 ----
 
 ### Why a new rendering engine?
 
-- Rendering Performance
-- Data Down, Actions Up
-- FastBoot
-
-
 ```
 {{#each envs as |env|}} Hello {{env}} {{/each}}
 ```	
+
+- Rendering Performance was bad
+- Wanted Data Down, Actions Up
+- Server rendering was impractical
 
 
 Note:
@@ -42,17 +40,25 @@ Original Sproutcore/Ember view engine: Regex string-based templating via Handleb
 ### Pressure from React
 #### Better, more performant change detection
 
+Note:
+- React rendering was really fast
+- Virtual DOM was better
+
 ----
 
 ### Types of change detection
 
 - Mutation checking (Ember)
 - Dirty Checking (AngularJS)
+- Zones/Observables (Angular)
 - Manual Notification (React)
+
+<span class="small">https://auth0.com/blog/glossary-of-modern-javascript-concepts-part-2/#change-detection</span>
 
 Note: 
 - Mutation checking: framework is told when something changed
 - Dirty checking: process of looping to check every scope variable to detect the changes, update DOM as changes found, re-loop
+- Zones/Observables
 - Manual Notification: tell framework when it should check for updates
 
 ----
@@ -68,8 +74,10 @@ Note:
 - Very fast for updates and re-renders
 
 Note: 
+
+- more about values vs. VirtualDOM:<br>basically Glimmer looks at values (not DOM) & <br>when they change, triggers re-render
 - Not as good for initial renders
-- Significantly improved re-render performance
+- Did significantly improved re-render performance
 
 Glimmer 1 released Summer 2015
 
