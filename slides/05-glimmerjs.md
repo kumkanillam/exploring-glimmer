@@ -33,11 +33,11 @@ Note:
 
 ----
 
-### GlimmerJS Standalone
+### Glimmer Rendering Engine<br>in Ember
 
  vs.
   
-### Glimmer Rendering Engine<br>in Ember
+### GlimmerJS Standalone
 
 ----
 
@@ -45,6 +45,12 @@ Note:
 
 No more tagname, attributebindings, etc. in component's root elements
 
+<span class="language">Glimmer</span>
+```
+<input disabled type="range" />
+```
+<hr>
+<span class="language">Ember</span>
 ```
 import Ember from 'ember';
    
@@ -56,17 +62,23 @@ export default Ember.Component.extend({
 });
 ```
 
-vs
-
-```
-<input disabled type="range" />
-```
-
 ----
 
 ### ES6 Classes
 
+<span class="language">Glimmer</span>
+```
+<input disabled type="range" />
+```
+```
+import Component from '@glimmer/component';
 
+export default class extends Component {
+  type = 'primary'
+}
+```
+<hr>
+<span class="language">Ember</span>
 ```
 import Ember from 'ember';
 
@@ -80,28 +92,15 @@ export default Ember.Component.extend({
 });
 ```
 
-vs
-
-```
-<input disabled type="range" />
-```
-```
-import Component from '@glimmer/component';
-
-export default class extends Component {
-  type = 'primary'
-}
-```
-
 ----
 
 ### TypeScript
 
 - Written in TypeScript, designed for JavaScript
   - Same API in TypeScript or JavaScript
-- Using TypeScript is optional
-<br><br>
+- Using TypeScript is optional<br>
 
+<span class="language">Glimmer</span>
 ```
 import Component from '@glimmer/component';
 export default class extends Component {
@@ -117,6 +116,21 @@ TypeScript is another tool you can use, not one you have to
 
 ### Computed Properties
 
+<span class="language">Glimmer</span>
+```
+import Component from '@glimmer/component';
+
+export default class extends Component {
+  firstName = 'Katie';
+  lastName = 'Gengler';
+  
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+```
+<hr>
+<span class="language">Ember</span>
 ```
 import Ember from 'ember';
 
@@ -130,30 +144,63 @@ export default Ember.Component.extend({
 });
 ```
 
-```
-import Component from '@glimmer/component';
-
-export default class extends Component {
-  firstName = 'Katie';
-  lastName = 'Gengler';
-  
-  get fullName() {
-    return `${this.firstName} ${this.lastName}`;
-  }
-}
-```
-
 Note:
 simpler than Ember computed properties
 can use standard getters/setters
 
 ----
 
-### No `.get()` / `.set()` / Decorators
+### No `this.get()` / `this.set()`
 
 Relies on ES5 getters/setters to intercept properties
 
+<span class="language">Glimmer</span>
+```
+import Component from '@glimmer/component';
 
+export default class extends Component {
+  // ...
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+```
+<hr>
+<span class="language">Ember</span>
+```
+import Ember from 'ember';
+
+export default Ember.Component.extend({
+  // ...
+  fullName: Ember.computed(function() {
+    return `${this.get('firstName')} ${this.get('lastName'}`;
+  })
+});
+```
+
+Note:
+get/set common issue for new Ember users until they develop muscle memory
+
+----
+
+### Decorators
+
+Declarative syntax to modify the shape of class declarations
+
+<span class="language">Glimmer</span>
+```
+import Component, { tracked } from '@glimmer/component';
+
+export default class extends Component {
+  // ...
+  @tracked('firstName', 'lastName')
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+```
+<hr>
+<span class="language">Ember</span>
 ```
 import Ember from 'ember';
 
@@ -165,23 +212,7 @@ export default Ember.Component.extend({
 });
 ```
 
-```
-import Component, { tracked } from '@glimmer/component';
-
-export default class extends Component {
-  @tracked firstName;
-  @tracked lastName;
-
-  @tracked('firstName', 'lastName')
-  get fullName() {
-    return `${this.firstName} ${this.lastName}`;
-  }
-}
-```
-
 Note:
-get/set common issue for new Ember users until they develop muscle memory
-
 Decorators are Stage 2 TC39 proposal
 
 ----
@@ -190,6 +221,7 @@ Decorators are Stage 2 TC39 proposal
 
 Actions are just functions
 
+<span class="language">Glimmer</span>
 ```
 import Component, { tracked } from '@glimmer/component';
 
@@ -201,7 +233,6 @@ export default class extends Component {
   }
 }
 ```
-
 ```
 <button onclick={{action setName "Zahra"}}>
   Change Name

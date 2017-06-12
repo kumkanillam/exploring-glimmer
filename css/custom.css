@@ -53,11 +53,19 @@ span.logo {
 	padding-top: 5px;
 	border-top: 1px solid grey;
 }
-span.medium {
+span.medium,
+p.medium {
 	font-size: .7em;
 }
-span.small {
+span.small,
+p.small {
 	font-size: .5em;
+}
+.reveal .slides > section .small,
+.reveal .slides > section > section .small,
+.reveal .slides > section .medium,
+.reveal .slides > section > section .medium {
+	line-height: 1.1;
 }
 
 .jool-items {
@@ -95,4 +103,12 @@ a.glimmer-video {
 .reveal img.no-border {
 	border: none;
 	border-radius: 10px;
+}
+
+span.language {
+	position: absolute;
+	font-size: 18px;
+	left: -30px;
+	transform: rotate(-25deg);
+	z-index: 9999;
 }

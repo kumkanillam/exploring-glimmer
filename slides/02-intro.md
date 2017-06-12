@@ -31,10 +31,9 @@ me: Commodore Plus4/BASIC, printer A2News, WCC,
 
 <img class="no-border" alt="JOOL Health logo" src="img/jool-health-logo.png"/>
 
-is a purpose-driven solution for<br>promoting healthy change
-
-<span class="small">works with employers, health plans and health systems to provide access to JOOL apps that help individuals:
-
+<p class="medium">JOOL Health provides a purpose-driven solution for promoting healthy change.<br><br>
+We work with employers, health plans and health systems to<br>
+provide access to JOOL apps that help individuals:</p>
 
 <div class="jool-items clearfix">
 	<div class="jool-item">
@@ -53,7 +52,6 @@ is a purpose-driven solution for<br>promoting healthy change
 		<p>the energy and willpower<br>they need to pursue it</p>
 	</div>
 </div>
-<br>
 
 [www.joolhealth.com/what-is-jool/](http://www.joolhealth.com/what-is-jool/)
 
@@ -65,5 +63,5 @@ employers, health plans, and health systems improve their populations’ health 
 
 ----
 
-### Please ask questions
+### Questions are welcome
 

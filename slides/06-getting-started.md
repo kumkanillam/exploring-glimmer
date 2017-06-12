@@ -81,8 +81,6 @@ Note:
 
 ### UI folder
 
-Glimmer puts all components in the `ui/components` folder,<br>generates a `component.ts` and `template.hbs` file
-
 ```
 my-app/src/ui/components/
                      |-- my-app/
@@ -91,6 +89,7 @@ my-app/src/ui/components/
                      |
                       ... more files
 ``` 
+Glimmer puts all components in the `ui/components` folder,<br>generates a `component.ts` and `template.hbs` file
 
 Note:
 
@@ -150,19 +149,18 @@ and reference it from the main `app.scss` file
 - loops, conditionals and event handlers
 
 ```
-import Component from "@glimmer/component";
-
-export default class ConferenceSpeakers extends Component {
-  speakers = ['Tom', 'Yehuda', 'Mike'];
-}
-```
-
-```
 <ul>
   {{#each speakers key="@index" as |speaker|}}
     <li>{{speaker}}</li>
   {{/each}}
 </ul>
+```
+```
+import Component from "@glimmer/component";
+
+export default class ConferenceSpeakers extends Component {
+  speakers = ['Tom', 'Yehuda', 'Mike'];
+}
 ```
 
 Note:
