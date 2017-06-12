@@ -41,6 +41,7 @@ Original Sproutcore/Ember view engine: Regex string-based templating via Handleb
 #### Better, more performant change detection
 
 Note:
+- React open-sourced 2013 (JSConf)
 - React rendering was really fast
 - Virtual DOM was better
 

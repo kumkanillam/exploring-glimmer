@@ -5,28 +5,26 @@
 
 ## NO
 
-Note:
-
 
 ----
 
-### GlimmerVM
+### GlimmerVM Extracted
 
-- Allows for quicker experimentation and iteration<br><br>
-- GlimmerVM adjusted to be used outside of Ember
-- GlimmerVM will now have 2 consumers, Ember and Glimmer
+- GlimmerVM extracted to be used outside of Ember
+  - GlimmerVM will now have 2 consumers, Ember and Glimmer
+  - Allows for quicker experimentation and iteration
 
 ----
 
 #### Questions
 
-1. Does Glimmer create a "brain-drain" on Ember?
-2. Why release a standalone rendering framework?
+1. Why release a standalone rendering framework?
+2. Does Glimmer create a "brain-drain" on Ember?
 3. Will there be 2 component APIs forever?
 
 Notes:
-1. proving ground for Ember itself, actively updating Ember to work with GlimmerVM<br>while gaining feedback in "wild"
-2. Glimmer appeals to more people than Ember, easy on-ramp to Ember
+1. Glimmer appeals to more people than Ember, easy on-ramp to Ember
+2. proving ground for Ember itself, actively updating Ember to work with GlimmerVM<br>while gaining feedback in "wild"
 3. Ember team focused on adding the Glimmer component API, decisions on existing API still to be made
 
 ----

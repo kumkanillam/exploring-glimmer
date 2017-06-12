@@ -33,6 +33,54 @@ Note:
 
 ----
 
+### TypeScript
+
+- Written in TypeScript, designed for JavaScript
+  - Same API in TypeScript or JavaScript
+- Using TypeScript is optional<br>
+
+<span class="language">Glimmer</span>
+```
+import Component from '@glimmer/component';
+export default class extends Component {
+  firstName: string;
+  lastName: string;
+}
+```
+
+Note:
+TypeScript is another tool you can use, not one you have to
+
+----
+
+### File Size
+
+- Ember is often criticized for large file sizes
+  - Typical Ember hello world app ~200KB
+  - Production Angular, Ember and React apps<br>often run ~400KB to ~700KB or more
+
+Note:
+Focus of Glimmer development was getting file size down
+
+----
+
+### File Size Compared
+#### Hello World App
+
+![glimmer file size compared](img/glimmer-file-size.png)
+
+Note:
+Still finding ways to make it smaller
+
+- preact
+- glimmer
+- vue.js
+- react
+- Angular 
+- Ember
+
+----
+
 ### Glimmer Rendering Engine<br>in Ember
 
  vs.
@@ -91,26 +139,6 @@ export default Ember.Component.extend({
   type: 'primary'
 });
 ```
-
-----
-
-### TypeScript
-
-- Written in TypeScript, designed for JavaScript
-  - Same API in TypeScript or JavaScript
-- Using TypeScript is optional<br>
-
-<span class="language">Glimmer</span>
-```
-import Component from '@glimmer/component';
-export default class extends Component {
-  firstName: string;
-  lastName: string;
-}
-```
-
-Note:
-TypeScript is another tool you can use, not one you have to
 
 ----
 
@@ -238,25 +266,3 @@ export default class extends Component {
   Change Name
 </button>
 ```
-
-----
-
-### File Size
-
-- Ember criticized for large file sizes<br>typical hello world app ~200KB
-- Production Angular, Ember and React apps<br>often run ~400KB to ~700KB or more
-
-----
-
-### File Size Compared
-#### Hello World App
-
-![glimmer file size compared](img/glimmer-file-size.png)
-
-Note:
-- preact
-- glimmer
-- vue.js
-- react
-- Angular 
-- Ember

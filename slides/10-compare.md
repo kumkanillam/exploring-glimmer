@@ -8,23 +8,21 @@
 ### Libraries
 #### Small, UI-focused
 
-<span class="medium">(from smallest to largest)</span>
 - Preact
 - Inferno
-- **Glimmer**
+- Riot.js
 - React
+- Vue.js
+- **Glimmer**
 
 ----
 
 ### Frameworks
 
-<span class="medium">(from least opinated to most\*)</span>
 - Create React App
 - Vue.js
 - Angular
 - Ember
-
-<span class="small">(\*in my opinion)</span>
 
 ----
 

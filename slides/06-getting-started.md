@@ -100,6 +100,18 @@ Note:
 
 ----
 
+### Styles
+
+- Works with both CSS or SCSS file
+  - Main app styles file generated:<br>`src/ui/styles/app.scss`
+- Ember team is working on co-located/scoped CSS   
+
+Note:
+Would personally put each component's styles in the component folder
+and reference it from the main `app.scss` file
+
+----
+
 ### Adding a Component
 
 ```
@@ -128,18 +140,6 @@ ember g glimmer-component conference-speakers/conference-speaker
 ----
 
 ![filesystem nested compoment](img/glimmer-filesystem-nested.png)
-
-----
-
-### Styles
-
-- Works with both CSS or SCSS file
-  - Main app styles file generated:<br>`src/ui/styles/app.scss`
-- Ember team is working on co-located/scoped CSS   
-
-Note:
-Would personally put each component's styles in the component folder
-and reference it from the main `app.scss` file
 
 ----
 
@@ -183,7 +183,7 @@ Ember uses {{ }} (double curly braces) for components
 
 ----
 
-### Data in Templates
+### Data  in Components/Templates
 
 - Arguments
 - Properties
