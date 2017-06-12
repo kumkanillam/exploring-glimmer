@@ -13,7 +13,7 @@ Original rendering engine inside of Ember was Handlebars
     <h1>Hello {{environment}}</h1>
 
 Note:
-https://gist.github.com/GavinJoyce/e6e0cc4fedbcf96d39267e59ba85472c
+https://gist.github.com/localpcguy/c70cbd78b40fa34310acf8ceb0718759
 
 Handlebars = basic string concatenation
 
